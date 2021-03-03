@@ -1,0 +1,64 @@
+@import "extend";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  &--arrowUp {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+div {
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.sort {
+  @extend %flexProp;
+  border-bottom: 1px solid #000;
+}
+
+.value {
+  text-align: right;
+  @extend %flexProp;
+  justify-content: flex-end;
+}
+
+.name {
+  @extend %flexProp;
+  justify-content: flex-start;
+}
+
+.valuteList-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+
+  span {
+    margin: 10px;
+  }
+}
+
+.svg-inline--fa {
+  width: 16px;
+  margin: 10px;
+  position: relative;
+}
